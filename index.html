@@ -1,0 +1,1559 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lemon Tree Hostel | Bangkok</title>
+
+<meta name="description" content="Discover Lemon Tree Hostel in Bangkok. A cozy place to stay, meet people and feel at home.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%2349613b'/%3E%3Ctext x='50' y='72' font-size='65' text-anchor='middle'%3E🍋%3C/text%3E%3C/svg%3E">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffdf6;
+    color: #343b2d;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fffdf6;
+    border-bottom: 1px solid #e8e5d8;
+}
+
+.header-inner {
+    max-width: 1250px;
+    margin: auto;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #49613b;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #d5a72d;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #c39420;
+}
+
+nav .book-link {
+    background: #49613b;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+}
+
+nav .book-link:hover {
+    background: #34482c;
+    color: white;
+}
+
+.page {
+    display: none;
+    min-height: 65vh;
+    animation: appear 0.35s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 70px 7%;
+
+    background:
+        linear-gradient(
+            rgba(20, 30, 15, 0.45),
+            rgba(20, 30, 15, 0.55)
+        ),
+        url("imagens/hostel-front.jpg")
+        center / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-label {
+    color: #f4d47d;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 62px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    background: #d5a72d;
+    color: #303b2b;
+    padding: 13px 27px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #e8bd4b;
+    transform: translateY(-2px);
+}
+
+.button-outline {
+    display: inline-block;
+    border: 1px solid #49613b;
+    color: #49613b;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.button-outline:hover {
+    background: #49613b;
+    color: white;
+}
+
+.hero .button-outline {
+    color: white;
+    border-color: white;
+}
+
+section.content {
+    padding: 75px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h1,
+.section-title h2 {
+    font-size: 38px;
+    line-height: 1.3;
+    color: #49613b;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #77796e;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.about-grid img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.about-text h2 {
+    color: #49613b;
+    font-size: 34px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #606357;
+    margin-bottom: 16px;
+}
+
+.rooms {
+    background: #f4f1e6;
+}
+
+.room-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.room-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.room-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.room-text {
+    padding: 25px;
+}
+
+.room-text h3 {
+    color: #49613b;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.room-text p {
+    color: #66695e;
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background: #f4f1e6;
+    color: #49613b;
+    padding: 5px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.facility-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.facility {
+    background: #f4f1e6;
+    border-radius: 14px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.facility-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.facility h3 {
+    color: #49613b;
+    margin-bottom: 8px;
+}
+
+.facility p {
+    color: #696c61;
+    font-size: 15px;
+}
+
+.family {
+    background: #49613b;
+    color: white;
+    text-align: center;
+    padding: 80px 7%;
+}
+
+.family-inner {
+    max-width: 800px;
+    margin: auto;
+}
+
+.family h1,
+.family h2 {
+    font-size: 40px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.family p {
+    color: #f1f2e9;
+    margin-bottom: 18px;
+}
+
+.family .button {
+    margin-top: 20px;
+}
+
+.bar-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.bar-content img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+.renovation {
+    display: inline-block;
+    background: #e8bd4b;
+    color: #343b2d;
+    padding: 9px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.bar-content p {
+    color: #606357;
+    margin-bottom: 15px;
+}
+
+.location-content {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.location-content h1 {
+    color: #49613b;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.location-content p {
+    margin-bottom: 20px;
+}
+
+.location-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.booking {
+    background: #49613b;
+    color: white;
+    text-align: center;
+    padding: 85px 7%;
+}
+
+.booking h1 {
+    font-size: 42px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.booking p {
+    margin-bottom: 30px;
+    color: #f1f2e9;
+}
+
+footer {
+    background: #303b2b;
+    color: white;
+    padding: 40px 7% 20px;
+}
+
+.footer-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 30px;
+}
+
+.footer-grid h3 {
+    color: #e8bd4b;
+    margin-bottom: 12px;
+}
+
+.footer-grid p,
+.footer-grid a {
+    color: #e1e5da;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-grid a:hover {
+    color: #e8bd4b;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+    font-size: 13px;
+    color: #cbd1c3;
+}
+
+@media (max-width: 900px) {
+
+    .header-inner {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .about-grid {
+        gap: 30px;
+    }
+
+    .facility-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    section.content {
+        padding: 55px 6%;
+    }
+
+    .hero {
+        min-height: 460px;
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid img {
+        height: 280px;
+    }
+
+    .about-text h2 {
+        font-size: 29px;
+    }
+
+    .room-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .room-card img {
+        height: 230px;
+    }
+
+    .facility-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .family h1,
+    .family h2,
+    .booking h1 {
+        font-size: 30px;
+    }
+
+    .bar-content img {
+        height: 250px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="header-inner">
+
+        <a href="#home" class="logo">
+            🍋 Lemon Tree <span>Hostel</span>
+        </a>
+
+        <nav>
+
+            <a href="#home" data-page="home">Home</a>
+
+            <a href="#about" data-page="about">About</a>
+
+            <a href="#rooms" data-page="rooms">Rooms</a>
+
+            <a href="#facilities" data-page="facilities">Facilities</a>
+
+            <a href="#bar" data-page="bar">Our Bar</a>
+
+            <a href="#location" data-page="location">Location</a>
+
+            <a href="#reviews" data-page="reviews">Guest Reviews</a>
+
+            <a
+                href="https://www.booking.com/hotel/th/lemon-tree-hostel-khaosan.pt-pt.html"
+                target="_blank"
+                rel="noopener"
+                class="book-link"
+            >
+                Book Now
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- HOME PAGE -->
+
+<main>
+
+<div class="page active" id="home">
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                Welcome to Bangkok
+            </div>
+
+            <h1>
+                Feel at Home<br>
+                in Bangkok
+            </h1>
+
+            <p>
+                A cozy place to stay, meet people
+                and experience Bangkok.
+                At Lemon Tree Hostel, you're not just a guest —
+                you're part of our family.
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    href="https://www.booking.com/hotel/th/lemon-tree-hostel-khaosan.pt-pt.html"
+                    target="_blank"
+                    rel="noopener"
+                    class="button"
+                >
+                    Book Your Stay
+                </a>
+
+                <a href="#about" class="button-outline">
+                    Discover Our Hostel
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="content">
+
+        <div class="section-title">
+
+            <h2>A Place to Feel at Home</h2>
+
+            <p>
+                Discover a welcoming place to stay
+                during your Bangkok adventure.
+            </p>
+
+        </div>
+
+        <div class="about-grid">
+
+            <img
+                src="imagens/hostel-lounge.jpg"
+                alt="Lemon Tree Hostel lounge"
+                loading="lazy"
+            >
+
+            <div class="about-text">
+
+                <h2>More Than Just a Stay</h2>
+
+                <p>
+                    Lemon Tree Hostel is a place where travelers
+                    can relax, meet new people and enjoy
+                    a friendly atmosphere.
+                </p>
+
+                <p>
+                    We believe that a hostel should feel
+                    like a home away from home.
+                </p>
+
+                <a href="#about" class="button">
+                    About Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="family">
+
+        <div class="family-inner">
+
+            <h2>Come as a Traveler.<br>Leave with Memories.</h2>
+
+            <p>
+                Whether you're traveling alone,
+                with friends or exploring Bangkok
+                for the first time, you're welcome here.
+            </p>
+
+            <a href="#rooms" class="button">
+                Explore Our Rooms
+            </a>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- ABOUT PAGE -->
+
+<div class="page" id="about">
+
+    <section class="content">
+
+        <div class="section-title">
+
+            <h1>About Lemon Tree Hostel</h1>
+
+            <p>
+                A welcoming place in Bangkok
+                where travelers can feel at home.
+            </p>
+
+        </div>
+
+        <div class="about-grid">
+
+            <img
+                src="imagens/hostel-lounge.jpg"
+                alt="Lemon Tree Hostel common area"
+                loading="lazy"
+            >
+
+            <div class="about-text">
+
+                <h2>Welcome to Our Family</h2>
+
+                <p>
+                    Looking for a comfortable and welcoming
+                    place to stay in Bangkok?
+                </p>
+
+                <p>
+                    Lemon Tree Hostel is a place where travelers
+                    can relax, meet new people and enjoy
+                    a friendly atmosphere.
+                </p>
+
+                <p>
+                    We believe that a hostel should be more
+                    than just a place to sleep.
+                    It should feel like a home away from home.
+                </p>
+
+                <p>
+                    Whether you're traveling alone,
+                    with friends or exploring Bangkok
+                    for the first time, you're always welcome.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="family">
+
+        <div class="family-inner">
+
+            <h2>More Than a Hostel</h2>
+
+            <p>
+                Our goal is to make every guest feel welcome,
+                comfortable and part of our family.
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- ROOMS PAGE -->
+
+<div class="page" id="rooms">
+
+    <section class="content rooms">
+
+        <div class="section-title">
+
+            <h1>Our Rooms</h1>
+
+            <p>
+                Find the perfect space for your stay.
+            </p>
+
+        </div>
+
+        <div class="room-grid">
+
+            <article class="room-card">
+
+                <img
+                    src="imagens/mixed-dorm.jpg"
+                    alt="Mixed dorm"
+                    loading="lazy"
+                >
+
+                <div class="room-text">
+
+                    <h3>Mixed Dorm</h3>
+
+                    <p>
+                        A friendly shared space for travelers
+                        looking to meet new people
+                        and share experiences.
+                    </p>
+
+                    <span class="tag">Shared Accommodation</span>
+
+                </div>
+
+            </article>
+
+
+            <article class="room-card">
+
+                <img
+                    src="imagens/female-dorm.jpg"
+                    alt="Female dorm"
+                    loading="lazy"
+                >
+
+                <div class="room-text">
+
+                    <h3>Female Dorm</h3>
+
+                    <p>
+                        A shared room for female travelers
+                        looking for a comfortable
+                        place to relax.
+                    </p>
+
+                    <span class="tag">Female Accommodation</span>
+
+                </div>
+
+            </article>
+
+
+            <article class="room-card">
+
+                <img
+                    src="imagens/king-room.jpg"
+                    alt="King room"
+                    loading="lazy"
+                >
+
+                <div class="room-text">
+
+                    <h3>King Room</h3>
+
+                    <p>
+                        Enjoy a private room with a comfortable
+                        king-size bed and a relaxing atmosphere.
+                    </p>
+
+                    <span class="tag">Private Room</span>
+
+                </div>
+
+            </article>
+
+
+            <article class="room-card">
+
+                <img
+                    src="imagens/standard-room.jpg"
+                    alt="Standard room"
+                    loading="lazy"
+                >
+
+                <div class="room-text">
+
+                    <h3>Standard Room</h3>
+
+                    <p>
+                        A simple and comfortable private room
+                        for travelers who prefer their own space.
+                    </p>
+
+                    <span class="tag">Private Room</span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- FACILITIES PAGE -->
+
+<div class="page" id="facilities">
+
+    <section class="content">
+
+        <div class="section-title">
+
+            <h1>Our Facilities</h1>
+
+            <p>
+                Everything you need for a comfortable stay.
+            </p>
+
+        </div>
+
+        <div class="facility-grid">
+
+            <article class="facility">
+
+                <div class="facility-icon">📶</div>
+
+                <h3>Wi-Fi</h3>
+
+                <p>
+                    Stay connected during your travels.
+                </p>
+
+            </article>
+
+
+            <article class="facility">
+
+                <div class="facility-icon">❄️</div>
+
+                <h3>Air Conditioning</h3>
+
+                <p>
+                    Relax and cool down after exploring Bangkok.
+                </p>
+
+            </article>
+
+
+            <article class="facility">
+
+                <div class="facility-icon">🛋️</div>
+
+                <h3>Shared Lounge</h3>
+
+                <p>
+                    A welcoming space to relax
+                    and meet other travelers.
+                </p>
+
+            </article>
+
+
+           
+<article class="facility">
+
+    <div class="facility-icon">🍳</div>
+
+    <h3>Food by Our Chef</h3>
+
+    <p>
+        Our kitchen is reserved for staff.
+        Guests are welcome to ask our chef
+        if they would like something to eat.
+    </p>
+
+</article>
+
+
+
+            <article class="facility">
+
+                <div class="facility-icon">🚿</div>
+
+                <h3>Bathrooms</h3>
+
+                <p>
+                    Convenient bathroom facilities
+                    for our guests.
+                </p>
+
+            </article>
+
+
+            <article class="facility">
+
+                <div class="facility-icon">🎒</div>
+
+                <h3>Travel Essentials</h3>
+
+                <p>
+                    A comfortable base for your
+                    Bangkok adventures.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- BAR PAGE -->
+
+<div class="page" id="bar">
+
+    <section class="content">
+
+        <div class="section-title">
+
+            <h1>Our Bar</h1>
+
+            <p>
+                A space for good moments and great company.
+            </p>
+
+        </div>
+
+        <div class="bar-content">
+
+            <img
+                src="imagens/hostel-bar.jpg"
+                alt="Lemon Tree Hostel bar"
+                loading="lazy"
+            >
+
+            <div class="renovation">
+                Currently Under Renovation
+            </div>
+
+            <p>
+                Our bar is currently undergoing renovation.
+                We're working on making it a welcoming place
+                where guests can relax, enjoy a drink
+                and spend time together.
+            </p>
+
+            <p>
+                The bar is not currently open
+                during the renovation.
+            </p>
+
+            <p>
+                We look forward to welcoming you
+                when the space is ready.
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- LOCATION PAGE -->
+
+<div class="page" id="location">
+
+    <section class="content">
+
+        <div class="location-content">
+
+            <div class="location-icon">📍</div>
+
+            <h1>Find Us in Bangkok</h1>
+
+            <p>
+                <strong>Lemon Tree Hostel</strong><br>
+                26/9 Arun Amarin Road<br>
+                Bangkok Noi, Bangkok 10700<br>
+                Thailand
+            </p>
+
+            <p>
+                Your cozy base for discovering Bangkok
+                and experiencing the city.
+            </p>
+
+            <!-- GOOGLE MAPS -->
+
+            <div class="google-map">
+
+                <iframe
+                    src="https://www.google.com/maps?q=13.7674713,100.4851711&z=17&output=embed"
+                    width="100%"
+                    height="400"
+                    style="border:0; border-radius:18px;"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Lemon Tree Hostel Khaosan Google Maps"
+                ></iframe>
+
+            </div>
+
+            <a
+                href="https://www.google.com/maps/place/Lemon+Tree+Hostel+Khaosan/@13.7674713,100.4825962,17z/"
+                target="_blank"
+                rel="noopener"
+                class="button"
+            >
+                Find Us on Google Maps
+            </a>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+
+
+
+<!-- REVIEWS PAGE -->
+
+<div class="page" id="reviews">
+
+    <section class="content">
+
+        <div class="reviews-content">
+
+            <h1>What Our Guests Say</h1>
+
+            <p>
+                Discover what our guests say about their
+                stay at Lemon Tree Hostel Khaosan.
+            </p>
+
+            <!-- GOOGLE REVIEWS WIDGET -->
+
+            <div data-reviewgrid="7b9bfc7c-05db-4553-982b-9ccb685f20ae"></div>
+
+            <script
+                src="https://reviewswidget.app/embed.js"
+                async
+            ></script>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- BOOKING PAGE -->
+
+<div class="page" id="booking">
+
+    <section class="content">
+
+        <div class="section-title">
+
+            <h1>Book Your Stay</h1>
+
+            <p>
+                Choose your preferred booking platform
+                and start your Bangkok adventure.
+            </p>
+
+        </div>
+
+        <div class="room-grid">
+
+            <!-- BOOKING.COM -->
+
+            <article class="room-card">
+
+                <div class="room-text">
+
+                    <h3>Booking.com</h3>
+
+                    <p>
+                        Find your stay and check availability
+                        through Booking.com.
+                    </p>
+
+                   
+<a href="#booking" data-page="booking" class="book-link">
+    Book Now
+</a>
+
+
+                </div>
+
+            </article>
+
+
+            <!-- AGODA -->
+
+            <article class="room-card">
+
+                <div class="room-text">
+
+                    <h3>Agoda</h3>
+
+                    <p>
+                        Explore our accommodation
+                        on Agoda.
+                    </p>
+
+                    <a
+                        href="https://www.agoda.com/pt-pt/accom/property?propertyId=61140259"
+                        target="_blank"
+                        rel="noopener"
+                        class="button"
+                    >
+                        Book on Agoda
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- HOSTELWORLD -->
+
+            <article class="room-card">
+
+                <div class="room-text">
+
+                    <h3>Hostelworld</h3>
+
+                    <p>
+                        Find your room and check
+                        the available booking options.
+                    </p>
+
+                    <a
+                        href="https://www.hostelworld.com/pwa/hosteldetails.php/Lemon-Tree-Hostel-Khaosan/Bangkok/328413"
+                        target="_blank"
+                        rel="noopener"
+                        class="button"
+                    >
+                        Book on Hostelworld
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- TRIP.COM / CTRIP -->
+
+            <article class="room-card">
+
+                <div class="room-text">
+
+                    <h3>Trip.com</h3>
+
+                    <p>
+                        Discover Lemon Tree Hostel
+                        on Trip.com.
+                    </p>
+
+                    <a
+                        href="https://th.trip.com/hotels/bangkok-hotel-detail-123319893/lemon-tree-hostel-khaosan/"
+                        target="_blank"
+                        rel="noopener"
+                        class="button"
+                    >
+                        Book on Trip.com
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- EXPEDIA -->
+
+            <article class="room-card">
+
+                <div class="room-text">
+
+                    <h3>Expedia</h3>
+
+                    <p>
+                        Explore our accommodation
+                        and booking options on Expedia.
+                    </p>
+
+                    <a
+                        href="https://www.expedia.co.th/en/Bangkok-Hotels-Lemon-Tree-Khaosan-Hostel.h109036222.Hotel-Information"
+                        target="_blank"
+                        rel="noopener"
+                        class="button"
+                    >
+                        Book on Expedia
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- TRAVELOKA -->
+
+            <article class="room-card">
+
+                <div class="room-text">
+
+                    <h3>Traveloka</h3>
+
+                    <p>
+                        Find Lemon Tree Hostel
+                        on Traveloka.
+                    </p>
+
+                    <a
+                        href="https://www.traveloka.com/en-en/hotel/detail?spec=25-10-2026.26-10-2026.1.1.HOTEL.9000003368154.Lemon%20Tree%20Hostel%20Khaosan.2"
+                        target="_blank"
+                        rel="noopener"
+                        class="button"
+                    >
+                        Book on Traveloka
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <div class="logo" style="color:white;margin-bottom:15px;">
+                🍋 Lemon Tree <span>Hostel</span>
+            </div>
+
+            <p>
+                A cozy place to stay, meet people
+                and feel at home in Bangkok.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Explore</h3>
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About Us</a>
+
+            <a href="#rooms">Our Rooms</a>
+
+            <a href="#facilities">Facilities</a>
+
+            <a href="#bar">Our Bar</a>
+
+            <a href="#location">Location</a>
+
+            <a href="#reviews">Guest Reviews</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contact & Reservations</h3>
+
+            <p>
+                26/9 Arun Amarin Road
+            </p>
+
+            <p>
+                Bangkok Noi, Bangkok 10700
+            </p>
+
+            <p>
+                Thailand
+            </p>
+
+           
+<a href="#booking" data-page="booking" class="book-link">
+    Book Now
+</a>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Lemon Tree Hostel
+        </p>
+
+        <p>
+            Bangkok, Thailand
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   PAGE NAVIGATION
+========================= */
+
+function showPage(pageName, updateHistory = true) {
+
+    const pages = document.querySelectorAll(".page");
+
+    pages.forEach(function(page) {
+        page.classList.remove("active");
+    });
+
+    const selectedPage = document.getElementById(pageName);
+
+    if (selectedPage) {
+        selectedPage.classList.add("active");
+    } else {
+        document.getElementById("home").classList.add("active");
+        pageName = "home";
+    }
+
+    const links = document.querySelectorAll("nav a[data-page]");
+
+    links.forEach(function(link) {
+
+        link.classList.remove("active");
+
+        if (link.dataset.page === pageName) {
+            link.classList.add("active");
+        }
+
+    });
+
+    if (updateHistory) {
+
+        history.pushState(
+            { page: pageName },
+            "",
+            "#" + pageName
+        );
+
+    }
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* =========================
+   MENU LINKS
+========================= */
+
+document.querySelectorAll("a[href^='#']").forEach(function(link) {
+
+    link.addEventListener("click", function(event) {
+
+        const pageName = link.getAttribute("href").substring(1);
+
+        const validPages = [
+            "home",
+            "about",
+            "rooms",
+            "facilities",
+            "bar",
+            "location",
+            "reviews",
+            "booking"
+        ];
+
+        if (validPages.includes(pageName)) {
+
+            event.preventDefault();
+
+            showPage(pageName);
+
+        }
+
+    });
+
+});
+
+
+/* =========================
+   BROWSER BACK / FORWARD
+========================= */
+
+window.addEventListener("popstate", function() {
+
+    const pageName = window.location.hash.substring(1) || "home";
+
+    showPage(pageName, false);
+
+});
+
+
+/* =========================
+   INITIAL PAGE
+========================= */
+
+window.addEventListener("DOMContentLoaded", function() {
+
+    const pageName = window.location.hash.substring(1) || "home";
+
+    showPage(pageName, false);
+
+});
+
+</script>
+
+</body>
+</html>
